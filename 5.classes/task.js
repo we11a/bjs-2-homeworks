@@ -81,11 +81,11 @@ class PrintEditionItem {
     }
   
     findBookBy(type, value) {
-      if (this.books.find(key => key[type] === value)) {
-        return this.books.find(key => key[type] === value);
-      } else {
-        return null;
-      }
+      let findBookResult = this.books.find(key => key[type] === value);
+      if (findBookResult) {
+        return findBookResult;
+      } 
+      return null;
     }
   
     giveBookByName(bookName) {
@@ -94,8 +94,7 @@ class PrintEditionItem {
       if (id >= 0) {
         return result;
         this.books.splice(id, 1);
-      } else {
-        return null;
       }
+      return null;
     }
   }
