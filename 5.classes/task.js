@@ -92,8 +92,8 @@ class PrintEditionItem {
       let result = this.books.find(key => key.name === bookName);
       let id = this.books.findIndex(i => i === result);
       if (id >= 0) {
-        return result;
         this.books.splice(id, 1);
+        return result;
       }
       return null;
     }
