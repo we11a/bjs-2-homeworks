@@ -1,21 +1,21 @@
 function parseCount(numberOfitems) {
-	if (isNaN(Number.parseInt(numberOfitems, 10))) {
+	let result = Number.parseInt(numberOfitems, 10);
+  if (isNaN(result)) {
     throw new Error('Невалидное значение');
   }
-	return (Number.parseInt(numberOfitems));
+	return result;
 }
+
 
 function validateCount(numberOfitems) {
-  let result = parseCount(numberOfitems);
   try {
-   result;
-  } catch (Error) {
-    return Error;
+   parseCount(numberOfitems);
+  } catch (error) {
+    return error;
   }
-  return result;
+  return parseCount(numberOfitems);
 }
 
-validateCount('7');
 
 class Triangle {
   constructor(a, b, c) {
@@ -32,7 +32,7 @@ class Triangle {
   }
 
   getArea() {
-    let p = 0.5 * triangle.getPerimeter();
+    let p = 0.5 * this.getPerimeter();
     return +(Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c))).toFixed(3);
   }
 }
