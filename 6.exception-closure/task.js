@@ -1,4 +1,6 @@
-﻿function parseCount(numberOfitems) {
+﻿
+function parseCount(numberOfitems) {
+
 	let result = Number.parseInt(numberOfitems, 10);
   if (isNaN(result)) {
     throw new Error('Невалидное значение');
@@ -40,6 +42,7 @@ class Triangle {
 function getTriangle(a, b, c) {
   try {
    return new Triangle(a, b, c);
+<<<<<<< HEAD
   } catch (error) {
       let object = {};
       object.getPerimeter = function() {
