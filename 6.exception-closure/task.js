@@ -1,4 +1,4 @@
-function parseCount(numberOfitems) {
+﻿function parseCount(numberOfitems) {
 	let result = Number.parseInt(numberOfitems, 10);
   if (isNaN(result)) {
     throw new Error('Невалидное значение');
