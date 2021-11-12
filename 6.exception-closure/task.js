@@ -1,5 +1,4 @@
-﻿
-function parseCount(numberOfitems) {
+﻿function parseCount(numberOfitems) {
 
 	let result = Number.parseInt(numberOfitems, 10);
   if (isNaN(result)) {
@@ -42,15 +41,10 @@ class Triangle {
 function getTriangle(a, b, c) {
   try {
    return new Triangle(a, b, c);
-<<<<<<< HEAD
   } catch (error) {
       let object = {};
-      object.getPerimeter = function() {
-        throw new Error('Ошибка! Треугольник не существует');
-      }
-      object.getArea = function() {
-        throw new Error('Ошибка! Треугольник не существует');
-      }
-      return object;
+      object.getPerimeter = () => console.log('Ошибка! Треугольник не существует');
+      object.getArea = () => console.log('Ошибка! Треугольник не существует');
+      return object.getPerimeter(), object.getArea();
     } 
 }
